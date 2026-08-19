@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './Navbar.css'
 
 const navItems = [
-  { label: 'HOME', href: '#', active: true },
-  { label: 'CODE ON PACK', href: '#' },
+  { label: 'HOME', href: '/', active: true },
+  { label: 'CODE ON PACK', href: '/cop' },
   { label: 'RAFFLE PROMOS AND PRIZES', href: '#', dropdown: true },
   { label: 'SPECIAL PROMO PACK', href: '#', dropdown: true, muted: true },
   { label: 'MIGHTY FEATURES', href: '#', dropdown: true },

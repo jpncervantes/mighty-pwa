@@ -1,36 +1,22 @@
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
+import Homepage from './pages/Homepage'
+import COP from './pages/COP'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: '50px',
-        width: '100%',
-        gap: '20px'
-      }}>
-        <img src="/sinulog2026dekstop1.png" width={'50%'} style={{
-          minWidth: '300px'
-        }}/>
-        <img src="/sinulog2026dekstop1.png" width={'50%'} style={{
-          minWidth: '300px'
-        }}/>
-        <img src="/sinulog2026dekstop1.png" width={'50%'} style={{
-          minWidth: '300px'
-        }}/>
-        <img src="/sinulog2026dekstop1.png" width={'50%'} style={{
-          minWidth: '300px'
-        }}/>
-        <img src="/sinulog2026dekstop1.png" width={'50%'} style={{
-          minWidth: '300px'
-        }}/>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/cop" element={<COP />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   )
 }
 
