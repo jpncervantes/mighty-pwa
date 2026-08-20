@@ -35,10 +35,6 @@ export default defineConfig({
           }
         ]
       },
-      workbox: {
-        // Precache all build assets
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}']
-      }
     })
   ]
 })
